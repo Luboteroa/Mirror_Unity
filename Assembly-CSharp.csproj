@@ -36,12 +36,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\UnitMovement.cs" />
-     <Compile Include="Assets\Scripts\MWNetworkManager.cs" />
-     <Compile Include="Assets\Scripts\MWNetworkPlayer.cs" />
+     <Compile Include="Assets\Scripts\Networking\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Buildings\UnitSpawner.cs" />
-     <Compile Include="Assets\Scripts\RTSNetworkManager.cs" />
+     <Compile Include="Assets\Scripts\Units\UnityCommandGiver.cs" />
+     <Compile Include="Assets\Scripts\Units\UnitMovement.cs" />
+     <Compile Include="Assets\Scripts\Units\UnitSelectionHandler.cs" />
+     <Compile Include="Assets\Scripts\Networking\MWNetworkManager.cs" />
+     <Compile Include="Assets\Scripts\Networking\RTSNetworkManager.cs" />
+     <Compile Include="Assets\Scripts\Units\Unit.cs" />
+     <Compile Include="Assets\Scripts\Networking\MWNetworkPlayer.cs" />
+     <Compile Include="Assets\Scripts\Networking\RTSPlayer.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
@@ -684,6 +688,9 @@
     </Reference>
     <Reference Include="Unity.Searcher.Editor">
         <HintPath>C:\Users\lcbam\OneDrive\Escritorio\GitHub\Mirror\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+        <HintPath>C:\Users\lcbam\OneDrive\Escritorio\GitHub\Mirror\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
         <HintPath>C:\Users\lcbam\OneDrive\Escritorio\GitHub\Mirror\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
