@@ -98,7 +98,7 @@ NavMeshAgent:
   m_Acceleration: 999
   avoidancePriority: 50
   m_AngularSpeed: 999
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1.75
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -251,7 +251,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 0.59477675, b: 0.4470588, a: 1}
+  m_Color: {r: 0.32556847, g: 1, b: 0.3066038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
