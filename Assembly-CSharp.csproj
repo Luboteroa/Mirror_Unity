@@ -44,8 +44,10 @@
      <Compile Include="Assets\Scripts\Networking\MWNetworkManager.cs" />
      <Compile Include="Assets\Scripts\Networking\RTSNetworkManager.cs" />
      <Compile Include="Assets\Scripts\Units\Unit.cs" />
-     <Compile Include="Assets\Scripts\Networking\MWNetworkPlayer.cs" />
      <Compile Include="Assets\Scripts\Networking\RTSPlayer.cs" />
+     <Compile Include="Assets\Scripts\Networking\MWNetworkPlayer.cs" />
+     <Compile Include="Assets\Scripts\Combat\Targeter.cs" />
+     <Compile Include="Assets\Scripts\Combat\Targetable.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
