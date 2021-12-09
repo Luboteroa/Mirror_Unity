@@ -20,6 +20,18 @@ public class UnityCommandGiver : MonoBehaviour
 
         if(!Physics.Raycast(_ray, out RaycastHit hit, Mathf.Infinity)) {return;}
 
+        if(hit.collider.TryGetComponent<Targetable>(out Targetable _target))
+        {
+            if(_target.hasAuthority)
+            {
+                TryMove(hit.point);
+                return;
+            }
+
+            TryTarget(_target);
+            return;
+        }
+
         TryMove(hit.point);
     }
 
@@ -28,6 +40,14 @@ public class UnityCommandGiver : MonoBehaviour
          foreach(Unit _unit in _unitSelectionHandler._selectedUnits)
          {
             _unit.GetUnitMovement().CmdMove(point);
+         }
+    }
+
+    private void TryTarget(Targetable _target)
+    {
+         foreach(Unit _unit in _unitSelectionHandler._selectedUnits)
+         {
+            _unit.GetTargeter().CmdSetTarget(_target.gameObject);
          }
     }
 }
