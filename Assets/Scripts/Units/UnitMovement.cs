@@ -12,7 +12,7 @@ public class UnitMovement : NetworkBehaviour
     private void Update()
     {
         if (!_agent.hasPath) { return; }
-        
+
         if(_agent.remainingDistance > _agent.stoppingDistance) { return; }
 
         _agent.ResetPath();
@@ -22,7 +22,7 @@ public class UnitMovement : NetworkBehaviour
     public void CmdMove(Vector3 position)
     {
         _targeter.ClearTarget();
-        
+
         if(!NavMesh.SamplePosition(position, out NavMeshHit hit, 1f, NavMesh.AllAreas)) { return; }
 
         _agent.SetDestination(hit.position);

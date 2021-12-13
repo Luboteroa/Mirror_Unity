@@ -40,6 +40,7 @@ public class Unit : NetworkBehaviour
     {
         ServerOnUnitDespawned?.Invoke(this);
     }
+    
     #endregion
 
     #region Client
