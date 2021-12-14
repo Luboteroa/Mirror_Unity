@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 2368684599976976294}
   - component: {fileID: 2480943296660473445}
   - component: {fileID: 311824955808538492}
+  - component: {fileID: 3441206792544496175}
+  - component: {fileID: 8551282234690977552}
   m_Layer: 0
   m_Name: Unit_Tank
   m_TagString: Untagged
@@ -38,6 +40,7 @@ Transform:
   - {fileID: 7374443312854928089}
   - {fileID: 6855659065135231238}
   - {fileID: 8077988046634383931}
+  - {fileID: 2577520965158052197}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49,7 +52,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254151822699542171}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.8875368, y: 2.2744615, z: 2.626455}
@@ -138,6 +141,7 @@ MonoBehaviour:
   syncInterval: 0.1
   _agent: {fileID: 4151126703219021995}
   _targeter: {fileID: 311824955808538492}
+  chaseRange: 10
 --- !u!114 &2368684599976976294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +218,41 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   _target: {fileID: 0}
+--- !u!114 &3441206792544496175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254151822699542171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ae76fd6d9bad04f9b6177f34c05167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  _targeter: {fileID: 311824955808538492}
+  ProjectilePrefab: {fileID: 4210437949090372033, guid: 640e83f730010e343a6333da7c0640c5, type: 3}
+  ProjectileSpawnPoint: {fileID: 2577520965158052197}
+  fireRange: 11
+  fireRate: 1
+  rotationSpeed: 180
+--- !u!114 &8551282234690977552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254151822699542171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d61b8132fc7e28d4ab09a4866884c7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  maxHealth: 100
 --- !u!1 &2647963352547558926
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +335,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3659494678201497289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2577520965158052197}
+  m_Layer: 0
+  m_Name: FiringPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2577520965158052197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3659494678201497289}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.6, z: 2.65}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8779352930742978828}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5828229912426156111
 GameObject:
   m_ObjectHideFlags: 0
